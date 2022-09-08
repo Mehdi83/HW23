@@ -1,0 +1,7 @@
+SELECT Customers.CustomerID, CustomerName, OrderID, Employees.EmployeeID, FirstName as EmployeeFirstName,LastName as EmployeeLastName 
+FROM Customers
+INNER JOIN Orders
+on Orders.CustomerID = Customers.CustomerID
+INNER JOIN Employees 
+on Employees.EmployeeID = Orders.EmployeeID
+where Customers.CustomerName like "%Hanari Carnes%" 
